@@ -60,16 +60,16 @@
             padding: 0;
             margin: 0;
         }
-        #subContent ul .active, #subContent ul li:hover {
+        #subContent > ul > .active, #subContent > ul > li:hover {
             background: #99eedd;
         }
-        #subContent ul li {
+        #subContent > ul > li {
             background: #6688cc;
             margin: 4px;
             overflow: hidden;
         }
 
-        #subContent a {
+        #subContent > ul > li > a {
             display: block;
             width: 100%;
             height: 100%;
@@ -81,6 +81,25 @@
         }
         #subContent ul li:hover {
             background: #99eedd;
+        }
+
+        #subContent > ul > li > ul > li > a{
+          display: block;
+          width: 100%;
+          height: 100%;
+          padding: 10px;
+          padding-left: 30px;
+        }
+        #subContent > ul > li > ul > li:hover {
+            background: #ee99aa;
+        }
+
+        #subContent > ul > li > ul {
+          display: none;
+        }
+
+        #subContent > ul > li:hover > ul,#subContent > ul > .active > ul {
+          display: block;
         }
     </style>
   <
@@ -101,8 +120,22 @@
                 <ul>
                     <li class="active"><a href="#" title="홈 메뉴">홈</a></li>
                     <li><a href="#" title="회사소개 메뉴">회사소개</a></li>
-                    <li><a href="#" title="뉴스 메뉴">뉴스</a></li>
-                    <li><a href="#" title="제품소개 메뉴">제품소개</a></li>
+                    <li>
+                        <a href="#" title="뉴스 메뉴">뉴스</a>
+                        <ul>
+                            <li><a href="#" title="뉴스1 메뉴">뉴스1</a></li>
+                            <li><a href="#" title="뉴스2 메뉴">뉴스2</a></li>
+                            <li><a href="#" title="뉴스3 메뉴">뉴스3</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" title="제품소개 메뉴">제품소개</a>
+                        <ul>
+                          <li><a href="#" title="뉴스1 메뉴">뉴스1</a></li>
+                          <li><a href="#" title="뉴스2 메뉴">뉴스2</a></li>
+                          <li><a href="#" title="뉴스3 메뉴">뉴스3</a></li>
+                        </ul>                          
+                    </li>
                     <li><a href="#" title="고객센터 메뉴">고객센터</a></li>
                 </ul>
             </div>
